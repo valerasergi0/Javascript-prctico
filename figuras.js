@@ -22,6 +22,19 @@ function perimetroTriangulo(lado1, lado2, base){
 function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
+console.groupEnd();
+
+//Código triángulo isóceles
+console.group("Triángulo isóceles");
+
+function alturaTrianguloIso(lado1, lado2, base){
+    if((lado1 == lado2) && lado1 !== base){
+        return Math.sqrt( (lado1**=2) - ((base**=2)/4) );
+        
+    }else{
+        alert("No es un triángulo isóceles")
+    }
+}
 
 console.groupEnd();
 
@@ -45,6 +58,8 @@ function areaCirculo(radio){
 }
 
 console.groupEnd();
+
+//Funciones para los botones el en html
 
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("inputCuadrado");
@@ -94,3 +109,6 @@ function calcularAreaCirculo(){
     const area = areaCirculo(value);
     alert(area);
 }
+
+
+
