@@ -29,7 +29,7 @@ console.group("Triángulo isóceles");
 
 function alturaTrianguloIso(lado1, lado2, base){
     if((lado1 == lado2) && lado1 !== base){
-        return Math.sqrt( (lado1**=2) - ((base**=2)/4) );
+        return Math.sqrt( (lado1**2) - ((base**2)/4) );
         
     }else{
         alert("No es un triángulo isóceles")
