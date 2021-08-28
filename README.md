@@ -17,3 +17,10 @@ JavaScript práctico
 - Segundo paso: implementar las fórmulas en javascript
 - Tercer paso: crear funciones
 - Cuarto paso: integrar javascript con HTML
+
+## Taller #3: Promedio, mediana y modo
+
+- Primer paso: definir las fórmulas
+- Segundo paso: implementar las fórmulas en javascript
+- Tercer paso: crear funciones
+- Cuarto paso: integrar javascript con HTML 
