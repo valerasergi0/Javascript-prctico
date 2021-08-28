@@ -6,8 +6,15 @@ const lista1 = [
 ];
 
 
-let sumaLista1 = 0;
 
-for(let i = 0; i<lista1.length;  i++){
 
-}
+
+
+function calcularMediaArtimetica(lista){
+    let sumaLista = 0;
+    for(let i = 0; i < lista.length;  i++){
+        sumaLista = sumaLista + lista[i];
+    }
+    const promedioLista = sumaLista / lista.length;
+    return promedioLista;
+};
