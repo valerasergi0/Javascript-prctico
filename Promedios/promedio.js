@@ -4,7 +4,7 @@ function calcularMediaArtimetica(lista){
     //    sumaLista = sumaLista + lista[i];
     //}
     const sumaLista = lista.reduce( //Este método recibe una función, funciona para hacer un ciclo
-        function (valorAcumulado = 0, nuevoElemento){ //Rquiere dos parámetros
+        function (valorAcumulado = 0, nuevoElemento){ //Requiere dos parámetros
             return valorAcumulado + nuevoElemento;
         }
     )
@@ -40,8 +40,25 @@ function cacularMediana(lista){
     return mediana;
 };
 
-function calcularModa(){
-
+function calcularModa(lista){
+    // .split() para convertir los valores del input separados por comas a un array
+    const listaCount = {};
+    lista.map( // Método para obtener el número de veces que se repite un elemento y convertirlo en un objeto
+        function (elemento){
+            if(listaCount[elemento]){
+                listaCount[elemento] += 1;
+            }else{
+                listaCount[elemento] = 1;
+            }
+        }
+    );
+    const listaArray = Object.entries(listaCount).sort( //Recibe como argumento el objeto que se convertirá en un array
+        function(a, b){
+            return a[1] - b[1];
+        }   
+    );
+    const moda = listaArray[listaArray.length - 1];
+    return moda;
 };
 
 const lista1 = [
@@ -57,25 +74,6 @@ const lista1 = [
     2,
     1,
   ];
-
-const lista1Count = {};
-
-lista1.map(
-    function (elemento){
-        if(lista1Count[elemento]){
-            lista1Count[elemento] += 1;
-        }else{
-            lista1Count[elemento] = 1;
-        }
-    }
-);
-
-const lista1Array = Object.entries(lista1Count).sort( //Recibe como argumento el objeto que se convertirá en un array
-    function(a, b){
-        return a[1] -b[1];
-    }   
-    
-);
 
 
 
