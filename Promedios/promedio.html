@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promedio, mediana y moda</title>
-    <link rel="sytlesheet" href="">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
+        <img src="./logo_size_invert.jpg" >
         <h1>Promedio, mediana y moda</h1>
+        <p>Tercer taller del curso práctico de JS</p>
     </header>
-    
+     <!--Formulario media aritmética-->
+     <section class="sectionMedia">
+        <h2>Calcula el la media aritmética de un conjunto de datos</h2>
+        <form class="formMedia">
+            <label for="inputConjunto">
+                Escribe todos tus datos separados por una coma (#, #,):</label>
+            <input id="inputConjunto" type="text" >
+            <button type="button" onclick="calcularMediaAritmetica()">
+                Calcular la media aritmética</button>
+        </form>
+    </section>
     <script src="./promedio.js"></script>
 </body>
 </html>

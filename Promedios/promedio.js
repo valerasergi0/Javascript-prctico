@@ -1,4 +1,4 @@
-function calcularMediaArtimetica(lista){
+function mediaArtimetica(lista){
     //let sumaLista = 0;
     //for(let i = 0; i < lista.length;  i++){
     //    sumaLista = sumaLista + lista[i];
@@ -25,7 +25,7 @@ function comparar (a, b){
 };
 
 
-function cacularMediana(lista){
+function mediana(lista){
     lista.sort(comparar);
     const mitadLista = parseInt(lista.length / 2);
     let mediana;
@@ -40,7 +40,7 @@ function cacularMediana(lista){
     return mediana;
 };
 
-function calcularModa(lista){
+function moda(lista){
     // .split() para convertir los valores del input separados por comas a un array
     const listaCount = {};
     lista.map( // Método para obtener el número de veces que se repite un elemento y convertirlo en un objeto
@@ -61,19 +61,20 @@ function calcularModa(lista){
     return moda;
 };
 
-const lista1 = [
-    1,
-    2,
-    3,
-    1,
-    2,
-    3,
-    4,
-    2,
-    2,
-    2,
-    1,
-  ];
+function calcularMediaAritmetica(){
+    const conjunto = document.getElementById("inputConjunto");
+    const conjuntoValue = conjunto.value;
+    console.log(conjuntoValue)
+    const lista = conjuntoValue.split(", ");
+    console.log(lista);
+    for(i = 0; i < lista.length; i++){
+        lista[i] = lista[i].;
+    }
+    console.log(lista);
+    const media = mediaArtimetica(lista);
+    console.log(media)
+    alert (media);
 
+}
 
 
