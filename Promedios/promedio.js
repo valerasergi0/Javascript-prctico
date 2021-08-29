@@ -57,7 +57,7 @@ function Moda(lista){
             return a[1] - b[1];
         }   
     );
-    const moda = listaArray[listaArray.length - 1];
+    const moda = listaArray[listaArray.length - 1][0];
     return moda;
 };
 
