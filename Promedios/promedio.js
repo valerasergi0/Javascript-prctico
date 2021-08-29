@@ -67,12 +67,11 @@ function calcularMediaAritmetica(){
     console.log(conjuntoValue)
     const lista = conjuntoValue.split(", ");
     console.log(lista);
-    for(i = 0; i < lista.length; i++){
-        lista[i] = lista[i].;
+     //Conseguir que los datos del array sean numeros y no strings
+    for(let i = 0; i < lista.length; i++){
+        lista[i] = Number(lista[i]);
     }
-    console.log(lista);
     const media = mediaArtimetica(lista);
-    console.log(media)
     alert (media);
 
 }
