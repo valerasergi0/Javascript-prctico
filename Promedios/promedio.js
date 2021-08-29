@@ -1,15 +1,3 @@
-const lista1 = [
-    100, 
-    200,
-    300,
-    500
-];
-
-
-
-
-
-
 function calcularMediaArtimetica(lista){
     //let sumaLista = 0;
     //for(let i = 0; i < lista.length;  i++){
@@ -23,3 +11,34 @@ function calcularMediaArtimetica(lista){
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 };
+
+function esPar(numero){
+    if(numero % 2 === 0){
+        return true;
+    }else{
+        return false;
+    }
+};
+
+function comparar (a, b){
+    return a -b;
+};
+
+
+function cacularMediana(lista){
+    lista.sort(comparar);
+    const mitadLista = parseInt(lista.length / 2);
+    let mediana;
+    if(esPar(lista.length)){
+        const elemento1 = lista[mitadLista];
+        const elemento2 = lista[mitadLista - 1];
+        const promedioE1E2 = calcularMediaArtimetica([elemento1, elemento2]);
+        mediana = promedioE1E2;
+    }else{
+        mediana = lista[mitadLista];
+    }
+    return mediana;
+};
+
+
+
