@@ -14,14 +14,36 @@
         <p>Tercer taller del curso práctico de JS</p>
     </header>
      <!--Formulario media aritmética-->
-     <section class="sectionMedia">
-        <h2>Calcula el la media aritmética de un conjunto de datos</h2>
-        <form class="formMedia">
-            <label for="inputConjunto">
-                Escribe todos tus datos separados por una coma (#, #,):</label>
-            <input id="inputConjunto" type="text">
+     <section class="sectionOperaciones">
+        <h2>Calcula la media aritmética de un conjunto de datos</h2>
+        <form class="formOperaciones">
+            <label for="inputConjuntoMedia">
+                Escribe todos tus datos separados por una coma:</label>
+            <input id="inputConjuntoMedia" type="text" placeholder="ej. 1, 2, 3..">
             <button type="button" onclick="calcularMediaAritmetica()">
                 Calcular la media aritmética</button>
+        </form>
+    </section>
+    <!--Formulario mediana-->
+    <section class="sectionOperaciones">
+        <h2>Calcula la mediana de un conjunto de datos</h2>
+        <form class="formOperaciones">
+            <label for="inputConjuntoMediana">
+                Escribe todos tus datos separados por una coma:</label>
+            <input id="inputConjuntoMediana" type="text" placeholder="ej. 1, 2, 3..">
+            <button type="button" onclick="calcularMediana()">
+                Calcular la mediana</button>
+        </form>
+    </section>
+    <!--Formulario moda-->
+    <section class="sectionOperaciones">
+        <h2>Calcula la moda de un conjunto de datos</h2>
+        <form class="formOperaciones">
+            <label for="inputConjuntoModa">
+                Escribe todos tus datos separados por una coma:</label>
+            <input id="inputConjuntoModa" type="text" placeholder="ej. 1, 2, 3..">
+            <button type="button" onclick="calcularModa()">
+                Calcular la moda</button>
         </form>
     </section>
     <script src="./promedio.js"></script>

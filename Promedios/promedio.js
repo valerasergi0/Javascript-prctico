@@ -25,14 +25,14 @@ function comparar (a, b){
 };
 
 
-function mediana(lista){
+function Mediana(lista){
     lista.sort(comparar);
     const mitadLista = parseInt(lista.length / 2);
     let mediana;
     if(esPar(lista.length)){
         const elemento1 = lista[mitadLista];
         const elemento2 = lista[mitadLista - 1];
-        const promedioE1E2 = calcularMediaArtimetica([elemento1, elemento2]);
+        const promedioE1E2 = mediaArtimetica([elemento1, elemento2]);
         mediana = promedioE1E2;
     }else{
         mediana = lista[mitadLista];
@@ -40,7 +40,7 @@ function mediana(lista){
     return mediana;
 };
 
-function moda(lista){
+function Moda(lista){
     // .split() para convertir los valores del input separados por comas a un array
     const listaCount = {};
     lista.map( // Método para obtener el número de veces que se repite un elemento y convertirlo en un objeto
@@ -62,18 +62,37 @@ function moda(lista){
 };
 
 function calcularMediaAritmetica(){
-    const conjunto = document.getElementById("inputConjunto");
+    const conjunto = document.getElementById("inputConjuntoMedia");
     const conjuntoValue = conjunto.value;
-    console.log(conjuntoValue)
     const lista = conjuntoValue.split(", ");
-    console.log(lista);
-     //Conseguir que los datos del array sean numeros y no strings
     for(let i = 0; i < lista.length; i++){
         lista[i] = Number(lista[i]);
     }
     const media = mediaArtimetica(lista);
     alert (media);
 
-}
+};
 
+function calcularMediana(){
+    const conjunto = document.getElementById("inputConjuntoMediana");
+    const conjuntoValue = conjunto.value;
+    const lista = conjuntoValue.split(", ");
+    for(let i = 0; i < lista.length; i++){
+        lista[i] = Number(lista[i]);
+    }
+    const mediana = Mediana(lista);
+    alert(mediana);
+};
+
+
+function calcularModa(){
+    const conjunto = document.getElementById("inputConjuntoModa");
+    const conjuntoValue = conjunto.value;
+    const lista = conjuntoValue.split(", ");
+    for(let i = 0; i < lista.length; i++){
+        lista[i] = Number(lista[i]);
+    }
+    const moda = Moda(lista);
+    alert(moda);
+}
 
