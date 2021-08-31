@@ -69,7 +69,8 @@ function calcularMediaAritmetica(){
         lista[i] = Number(lista[i]);
     }
     const media = mediaArtimetica(lista);
-    alert (media);
+    const result1P =  document.getElementById("result1P");
+    result1P.innerText = "La media aritmética de tu conjunto es: " + media;
 
 };
 
@@ -81,7 +82,9 @@ function calcularMediana(){
         lista[i] = Number(lista[i]);
     }
     const mediana = Mediana(lista);
-    alert(mediana);
+    const result2P =  document.getElementById("result2P");
+    result2P.innerText = "La mediana de tu conjunto es: " + mediana;
+
 };
 
 
@@ -93,6 +96,8 @@ function calcularModa(){
         lista[i] = Number(lista[i]);
     }
     const moda = Moda(lista);
-    alert(moda);
+    const result3P =  document.getElementById("result3P");
+    result3P.innerText = "La moda de tu conjunto es: " + moda;
+
 }
 
